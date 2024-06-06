@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Путеводитель по городу</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+	<meta name="viewport" content="width=device-width">
+
+</head>
+
+<body>
+	<div class="container">
+		<div class="data">
+			<h1>Путеводитель по городу</h1>
+			<p>С помощью данного приложения существует возможность пользователям и туристам легко и удобно изучать
+				город.</p>
+			<p>Поддержка геолокации браузером:<span class="output"></span></p>
+			<p><span id="warnings"></span></p>
+			<p> <input type="button" class="system-button" id="ShowHideRoutePanel"
+					value="Построить маршрут до точки на карте" /></p>
+			<p> <input type="button" class="system-button" id="RemoveUserPoints"
+					value="Убрать все точки пользователя с карты" /></p>
+			<p>Виджет прогноза погоды на текущий момент:</p>
+			<p>
+			<div class="weather-box">
+				<div class="search-box">
+					<i class="fa-solid fa-location-dot"></i>
+					<input type="text" id="forecast-target" placeholder="Адрес прогноза:" />
+					<button class="fa-solid fa-magnifying-glass"></button>
+				</div>
+				<div class="error">
+					<p>Неправильное название города!</p>
+				</div>
+				<div class="weather">
+					<div class="weather-image">
+						<i class="fa-solid fa-cloud"></i>
+					</div>
+					<h1 class="temp">22 &#8451</h1>
+					<h2 class="city">Москва</h2>
+					<div class="details">
+						<div class="col">
+							<i class="fa-solid fa-water"></i>
+							<div>
+								<p class="humidity">50%</p>
+								<p>Влажность</p>
+							</div>
+						</div>
+						<div class="col">
+							<i class="fa-solid fa-wind"></i>
+							<div>
+								<p class="wind">15 км/ч</p>
+								<p>Скорость ветра</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			</p>
+		</div>
+		<div id="map" class="map"></div>
+
+		<script
+			src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=e6ea7a81-e15a-4b33-bfda-8cb53d455823&lang=ru_RU"></script>
+		<script src="script.js"></script>
+	</div>
+
+</body>
+
+</html>
